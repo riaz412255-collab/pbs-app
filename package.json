@@ -1,0 +1,28 @@
+{
+  "name": "pbs-app",
+  "version": "1.0.0",
+  "description": "PBS Instruction App",
+  "author": "Md. Riaz Uddin Khan",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --publish never"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.pbs.app",
+    "productName": "PBS App",
+    "files": ["main.js", "*.html", "icon.png"],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
